@@ -1,0 +1,67 @@
+/* Background color untuk semua halaman */
+body {
+  background-color: #ccccff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation bar */
+nav {
+  padding: 15px;
+  background-color: #9999ff;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+}
+
+/* Index.html specific */
+main table {
+  width: 100%;
+}
+
+main td {
+  vertical-align: top;
+  padding-right: 30px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1:first-of-type {
+  font-size: 48px;
+}
+
+h1:nth-of-type(2) {
+  font-size: 60px;
+}
+
+main p {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Links in main content */
+main div a {
+  margin: 0 10px;
+}
+
+/* Projects list spacing */
+main ul li {
+  margin-bottom: 20px;
+}
