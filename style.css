@@ -1,3 +1,106 @@
+/* Home photo interactive hover */
+.home-photo img {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border-radius: 16px;
+}
+
+/* Timeline for About Me */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px 0;
+}
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.timeline-date {
+  background: #ffbbd2;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+}
+.timeline-content {
+  background: rgba(255,255,255,0.8);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+.achievements {
+  margin: 24px 0;
+  padding-left: 20px;
+}
+.achievements li {
+  background: #ffe4ec;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+/* Carousel for Projects */
+.carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 32px auto;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s;
+}
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.85);
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Quicksand', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffbbd2;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 700px) {
+  .home-content {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+  .carousel {
+    max-width: 95vw;
+  }
+  .timeline-date, .timeline-content {
+    font-size: 0.95em;
+    padding: 8px 10px;
+  }
+}
 @font-face {
   font-family: 'Quicksand';
   src: url('font/FontsFree-Net-Quicksand-Bold.ttf') format('truetype');
@@ -118,38 +221,38 @@ nav a:hover {
 
 /* Background images for sections */
 .home-bg {
-  background-image: url('images/pagebg/Home.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('images/pagebg/background.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 .aboutme-bg {
-  background-image: url('images/pagebg/aboutme.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('images/pagebg/background.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 .projects-bg {
-  background-image: url('images/pagebg/projects.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('images/pagebg/background.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 .skillsexp-bg {
-  background-image: url('images/pagebg/skillsexp.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('images/pagebg/background.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 .contact-bg {
-  background-image: url('images/pagebg/contact.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('images/pagebg/background.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 /* Lists */
