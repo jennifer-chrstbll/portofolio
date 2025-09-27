@@ -1,16 +1,35 @@
-/* Background color untuk semua halaman */
-body {
-  background-color: #ccccff;
-  font-family: Arial, sans-serif;
+/* Basic reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Navigation bar */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+}
+
+/* Fixed navigation bar */
+header {
+  position: relative;
+  z-index: 1000;
+}
+
 nav {
   padding: 15px;
-  background-color: #9999ff;
+  background-color: #ffbbd2;
   text-align: center;
+  position: fixed;      /* fixed = always visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 nav a {
@@ -24,44 +43,102 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
-main {
+/* Each section full screen with padding to clear nav */
+.section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 100px; /* offset for fixed nav */
+  text-align: center;
+}
+
+/* Home content flex layout */
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Index.html specific */
-main table {
-  width: 100%;
+.home-text {
+  max-width: 500px;
 }
 
-main td {
-  vertical-align: top;
-  padding-right: 30px;
-}
-
-h1 {
-  margin: 0;
-}
-
-h1:first-of-type {
+.home-text h1:first-of-type {
   font-size: 48px;
 }
 
-h1:nth-of-type(2) {
+.home-text h1:nth-of-type(2) {
   font-size: 60px;
 }
 
-main p {
+.home-text p {
   max-width: 500px;
   line-height: 1.5;
+  margin: 20px 0;
 }
 
-/* Links in main content */
-main div a {
+.home-links a {
   margin: 0 10px;
 }
 
-/* Projects list spacing */
-main ul li {
-  margin-bottom: 20px;
+.home-photo img {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Background images for sections */
+.home-bg {
+  background-image: url('images/pagebg/Home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutme-bg {
+  background-image: url('images/pagebg/aboutme.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.projects-bg {
+  background-image: url('images/pagebg/projects.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.skillsexp-bg {
+  background-image: url('images/pagebg/skillsexp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-bg {
+  background-image: url('images/pagebg/contact.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Lists */
+.section ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.section ul li {
+  margin-bottom: 15px;
 }

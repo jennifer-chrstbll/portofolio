@@ -8,18 +8,19 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="aboutme.html">About Me</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="contact.html">Contact</a>
+      <a href="#home">Home</a> |
+      <a href="#aboutme">About Me</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#skillsexp">Skills & Experiences</a> |
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <table>
-      <tr>
-        <!-- Left side: Intro text -->
-        <td>
+    <!-- Home -->
+    <section id="home" class="section home-bg">
+      <div class="home-content">
+        <div class="home-text">
           <h1>Hey, it’s</h1>
           <h1>Jennifer Christabelle</h1>
           <p>
@@ -30,19 +31,82 @@
             Whether it’s working with data, building systems, or collaborating with others, I aim to grow, 
             learn, and help others through my skills.
           </p>
-          <div>
-            <a href="projects.html">View Projects</a> |
-            <a href="aboutme.html">About Me</a> |
-            <a href="contact.html">Get In Touch</a>
+          <div class="home-links">
+            <a href="#projects">View Projects</a> |
+            <a href="#aboutme">About Me</a> |
+            <a href="#contact">Get In Touch</a>
           </div>
-        </td>
+        </div>
+        <div class="home-photo">
+          <img src="images/mypic.jpg" alt="Jennifer Christabelle">
+        </div>
+      </div>
+    </section>
 
-        <!-- Right side: Profile image -->
-        <td>
-          <img src="mypic.jpg" alt="Jennifer Christabelle" width="300">
-        </td>
-      </tr>
-    </table>
+    <!-- About -->
+    <section id="aboutme" class="section aboutme-bg">
+      <h1>About Me</h1>
+      <h2>Education</h2>
+      <ul>
+        <li>2023 – Now: Universitas Pelita Harapan (Majored in Informatics)</li>
+        <li>2020 – 2023: High School, Kairos Gracia (Majored in ICT, Physics, and Business Studies)</li>
+        <li>2017 – 2019: Middle School, Kairos Gracia</li>
+        <li>2010 – 2016: Primary School, Kairos Gracia</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects-bg">
+      <h1>Projects</h1>
+      <ul>
+        <li>
+          <strong>NCFI Prayers</strong><br>
+          This project is a website built to serve as a digital platform for prayers and community sharing. 
+          I contributed as the <strong>Lead Tester</strong>, ensuring the website ran smoothly, identifying bugs, 
+          and verifying that all features met expectations. In addition, I supported the team as a 
+          <strong>Backup Project Manager</strong>, helping coordinate tasks, manage timelines, and keep 
+          the team aligned with project goals. I also actively participate in writing the documents needed such as the proposal.
+        </li>
+        <li>
+          <strong>Automatic Attendance System</strong><br>
+          This project focused on creating an automatic attendance system where a person could be marked 
+          as present simply by walking past a camera, using recognition technology. I contributed by 
+          designing <strong>use case and activity diagrams</strong> to clearly outline the system’s workflow 
+          and make development easier for the team. I also played a role in the <strong>frontend development</strong> 
+          of the website, ensuring that the interface was user-friendly and aligned with the intended system 
+          behavior.
+        </li>
+        <li>
+          <strong>Flexbox Pricing Table</strong><br>
+          <p>Link: <a href="https://jennifer-chrstbll.github.io/flex_exercise/" target="_blank">flexbox</a></p>
+        </li>
+        <li>
+          <strong>Dice</strong><br>
+          <p>Link: <a href="https://jennifer-chrstbll.github.io/dice_exercise/" target="_blank">dice</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills & Experiences -->
+    <section id="skillsexp" class="section skillsexp-bg">
+      <h1>Skills & Experiences</h1>
+      <ul>
+        <li>Programming: Python, Java, HTML, CSS, JavaScript</li>
+        <li>Data Science: Data analysis, visualization, machine learning basics</li>
+        <li>Web Development: Frontend (HTML, CSS, JS), basic backend</li>
+        <li>Project Management: Team coordination, documentation, testing</li>
+        <li>Other: Communication, problem-solving, adaptability</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-bg">
+      <h1>Get In Touch</h1>
+      <p>Email: <a href="mailto:jenniferbells32@gmail.com">jenniferbells32@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/jennifer" target="_blank">linkedin.com/in/jennifer</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/jennifer_christabelle/" target="_blank">@jennifer_christabelle</a></p>
+      <p>Phone: +62 812 1337 9147</p>
+    </section>
   </main>
 </body>
 </html>
