@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('font/FontsFree-Net-Quicksand-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Custom font for portfolio */
+@font-face {
+  font-family: 'Marykate';
+  src: url('font/FontsFree-Net-Marykate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Marykate', 'Quicksand', Arial, sans-serif;
+}
 /* Basic reset */
 * {
   box-sizing: border-box;
@@ -10,7 +27,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   background-color: transparent;
 }
 
@@ -30,6 +47,8 @@ nav {
   right: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-family: 'Marykate', Arial, sans-serif;
+  font-size: 1.5rem;
 }
 
 nav a {
