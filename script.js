@@ -1,51 +1,3 @@
-// Home photo hover effect
-const homePhoto = document.querySelector('.home-photo img');
-if (homePhoto) {
-  homePhoto.addEventListener('mouseenter', () => {
-    homePhoto.style.transform = 'scale(1.12)';
-    homePhoto.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25)';
-    homePhoto.style.transition = 'transform 0.3s, box-shadow 0.3s';
-    homePhoto.style.cursor = 'pointer';
-  });
-  homePhoto.addEventListener('mouseleave', () => {
-    homePhoto.style.transform = 'scale(1)';
-    homePhoto.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
-  });
-}
-
-// About Me Timeline & Achievements
-function createTimeline() {
-  const aboutSection = document.getElementById('aboutme');
-  if (!aboutSection) return;
-  aboutSection.innerHTML = `
-    <h1>About Me</h1>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">2023 – Now</div>
-        <div class="timeline-content">Universitas Pelita Harapan (Majored in Informatics)</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2020 – 2023</div>
-        <div class="timeline-content">High School, Kairos Gracia (Majored in ICT, Physics, and Business Studies)</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2017 – 2019</div>
-        <div class="timeline-content">Middle School, Kairos Gracia</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2010 – 2016</div>
-        <div class="timeline-content">Primary School, Kairos Gracia</div>
-      </div>
-    </div>
-    <h2>Achievements</h2>
-    <ul class="achievements">
-      <li>Rank 2 in Conversational Chinese Competition (Daerah)</li>
-      <li>Best in ICT Cambridge Curriculum in Secondary School Kairos</li>
-    </ul>
-  `;
-}
-createTimeline();
-
 // Projects Carousel
 function createCarousel() {
   const projectsSection = document.getElementById('projects');
@@ -54,50 +6,155 @@ function createCarousel() {
     <h1>Projects</h1>
     <div class="carousel">
       <div class="carousel-track">
-        <div class="carousel-item">
-          <strong>NCFI Prayers</strong><br>
-          <span>This project is a website built to serve as a digital platform for prayers and community sharing.<br>
-          Lead Tester, Backup Project Manager, documentation writer.</span>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">This Portfolio</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/thisporto.png" alt="this portofolio">
+            </div>
+            <div class="carousel-desc">
+              A portfolio website <br>
+              Role: Developer, Designer
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <strong>Automatic Attendance System</strong><br>
-          <span>Automatic attendance using recognition technology.<br>
-          Use case/activity diagrams, frontend dev.</span>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">Photobooth</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/photobooth.png" alt="photobooth">
+            </div>
+            <div class="carousel-desc">
+              A photobooth website <br>
+              Role: Frontend Developer, Documentation Writer.
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <strong>Flexbox Pricing Table</strong><br>
-          <a href="https://jennifer-chrstbll.github.io/flex_exercise/" target="_blank">flexbox</a>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">NCFI Prayers</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/prayerlink.png" alt="NCFI Prayers">
+            </div>
+            <div class="carousel-desc">
+              A website for prayers and community sharing.<br>
+              Role: Lead Tester, Backup Project Manager, Documentation Writer.
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <strong>Dice</strong><br>
-          <a href="https://jennifer-chrstbll.github.io/dice_exercise/" target="_blank">dice</a>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">Automatic Attendance System</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/gkikarawaci.png" alt="Automatic Attendance System">
+            </div>
+            <div class="carousel-desc">
+              Automated attendance using recognition technology.<br>
+              Role: Use case/activity diagrams, Frontend Developer.
+            </div>
+          </div>
         </div>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">Flexbox Pricing Table</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/flexbox.png" alt="Flexbox Pricing Table">
+            </div>
+            <div class="carousel-desc">
+              Responsive pricing table using CSS Flexbox.<br>
+              Role: Developer.
+              <a href="https://jennifer-chrstbll.github.io/flex_exercise/" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">Rolling Dice Game</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/rolldice.png" alt="Dice Game">
+            </div>
+            <div class="carousel-desc">
+              Interactive dice game for learning JS basics.<br>
+              Role: Developer.
+              <a href="https://jennifer-chrstbll.github.io/dice_exercise/" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <div class="carousel-title">Feedback Form</div>
+          <div class="carousel-body">
+            <div class="carousel-img">
+              <img src="images/projects/feedback.png" alt="feedback form">
+            </div>
+            <div class="carousel-desc">
+              Interactive Feedback Form that can be submitted.<br>
+              Role: Developer.
+            </div>
+          </div>
+        </div>
+
       </div>
       <button class="carousel-btn prev">&#10094;</button>
       <button class="carousel-btn next">&#10095;</button>
+      <div class="carousel-indicators"></div>
     </div>
   `;
 
   // Carousel logic
   const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+  // Create indicators
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => {
+      current = i;
+      showSlide(current);
+    };
+    indicatorsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.carousel-dot');
   let current = 0;
-  function showItem(idx) {
+
+  function showSlide(idx) {
     track.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[idx].classList.add('active');
   }
-  showItem(current);
+
+  showSlide(current);
+
   document.querySelector('.carousel-btn.next').onclick = () => {
-    current = (current + 1) % items.length;
-    showItem(current);
+    current = (current + 1) % slides.length;
+    showSlide(current);
   };
   document.querySelector('.carousel-btn.prev').onclick = () => {
-    current = (current - 1 + items.length) % items.length;
-    showItem(current);
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
   };
 }
 createCarousel();
 
-// Responsive adjustments
-window.addEventListener('resize', () => {
-  // You can add more responsive logic here if needed
-});
+// Home photo hover effect
+const homePhoto = document.querySelector('.home-photo img');
+if (homePhoto) {
+  homePhoto.addEventListener('mouseenter', () => {
+    homePhoto.style.transform = 'scale(1.12)';
+    homePhoto.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25)';
+  });
+  homePhoto.addEventListener('mouseleave', () => {
+    homePhoto.style.transform = 'scale(1)';
+    homePhoto.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
+  });
+}
