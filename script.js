@@ -1,4 +1,3 @@
-// Projects Carousel
 function createCarousel() {
   const projectsSection = document.getElementById('projects');
   if (!projectsSection) return;
@@ -11,7 +10,7 @@ function createCarousel() {
           <div class="carousel-title">This Portfolio</div>
           <div class="carousel-body">
             <div class="carousel-img">
-              <img src="images/projects/thisporto.png" alt="this portofolio">
+              <img src="images/projects/thisporto.png" alt="Portofolio Website">
             </div>
             <div class="carousel-desc">
               A portfolio website <br>
@@ -24,10 +23,10 @@ function createCarousel() {
           <div class="carousel-title">Photobooth</div>
           <div class="carousel-body">
             <div class="carousel-img">
-              <img src="images/projects/photobooth.png" alt="photobooth">
+              <img src="images/projects/photobooth.png" alt="photobooth website">
             </div>
             <div class="carousel-desc">
-              A photobooth website <br>
+              A photobooth website. <br>
               Role: Frontend Developer, Documentation Writer.
             </div>
           </div>
@@ -67,21 +66,21 @@ function createCarousel() {
             </div>
             <div class="carousel-desc">
               Responsive pricing table using CSS Flexbox.<br>
-              Role: Developer.
+              Role: Developer, Designer.<br>
               <a href="https://jennifer-chrstbll.github.io/flex_exercise/" target="_blank">View Project</a>
             </div>
           </div>
         </div>
 
         <div class="carousel-slide">
-          <div class="carousel-title">Rolling Dice Game</div>
+          <div class="carousel-title">Dice Game</div>
           <div class="carousel-body">
             <div class="carousel-img">
               <img src="images/projects/rolldice.png" alt="Dice Game">
             </div>
             <div class="carousel-desc">
               Interactive dice game for learning JS basics.<br>
-              Role: Developer.
+              Role: Developer, Designer.<br>
               <a href="https://jennifer-chrstbll.github.io/dice_exercise/" target="_blank">View Project</a>
             </div>
           </div>
@@ -91,11 +90,11 @@ function createCarousel() {
           <div class="carousel-title">Feedback Form</div>
           <div class="carousel-body">
             <div class="carousel-img">
-              <img src="images/projects/feedback.png" alt="feedback form">
+              <img src="images/projects/feedback.png" alt="NCFI Prayers">
             </div>
             <div class="carousel-desc">
               Interactive Feedback Form that can be submitted.<br>
-              Role: Developer.
+              Role: Developer, Designer.
             </div>
           </div>
         </div>
@@ -111,26 +110,36 @@ function createCarousel() {
   const track = document.querySelector('.carousel-track');
   const slides = document.querySelectorAll('.carousel-slide');
   const indicatorsContainer = document.querySelector('.carousel-indicators');
+  const projectImages = [
+    "images/projects/thisporto.png",
+    "images/projects/photobooth.png",
+    "images/projects/prayerlink.png",
+    "images/projects/gkikarawaci.png",
+    "images/projects/flexbox.png",
+    "images/projects/rolldice.png",
+    "images/projects/feedback.png",
+  ];
 
-  // Create indicators
-  slides.forEach((_, i) => {
-    const dot = document.createElement('span');
-    dot.classList.add('carousel-dot');
-    if (i === 0) dot.classList.add('active');
-    dot.onclick = () => {
+  // Create thumbnail indicators
+  projectImages.forEach((imgSrc, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = imgSrc;
+    thumb.classList.add('carousel-thumb');
+    if (i === 0) thumb.classList.add('active');
+    thumb.onclick = () => {
       current = i;
       showSlide(current);
     };
-    indicatorsContainer.appendChild(dot);
+    indicatorsContainer.appendChild(thumb);
   });
 
-  const dots = document.querySelectorAll('.carousel-dot');
+  const thumbs = document.querySelectorAll('.carousel-thumb');
   let current = 0;
 
   function showSlide(idx) {
     track.style.transform = `translateX(-${idx * 100}%)`;
-    dots.forEach(d => d.classList.remove('active'));
-    dots[idx].classList.add('active');
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[idx].classList.add('active');
   }
 
   showSlide(current);
@@ -145,6 +154,22 @@ function createCarousel() {
   };
 }
 createCarousel();
+
+// Skills Tab Switcher
+const skillButtons = document.querySelectorAll('.skills-btn');
+const skillContents = document.querySelectorAll('.skills-content');
+
+skillButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active state
+    skillButtons.forEach(b => b.classList.remove('active'));
+    skillContents.forEach(c => c.classList.remove('active'));
+
+    // Add active state to selected
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.target).classList.add('active');
+  });
+});
 
 // Home photo hover effect
 const homePhoto = document.querySelector('.home-photo img');

@@ -8,7 +8,8 @@
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 32px;
-  min-width: 100%;
+  min-width: 800px;
+  min-height: 400px;
   gap: 20px;
 }
 .carousel-title {
@@ -21,21 +22,22 @@
 .carousel-body {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 .carousel-img {
-  flex: 0 0 280px;
+  flex: 0 0 55%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .carousel-img img {
-  max-width: 260px;
-  max-height: 220px;
-  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   object-fit: cover;
 }
@@ -53,12 +55,12 @@
     padding: 18px 8px;
   }
   .carousel-img {
-    height: 120px;
-    flex-basis: 120px;
+    height: 240px;
+    flex: 0 0 340px;
   }
   .carousel-img img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 320px;
+    max-height: 220px;
   }
 }
 /* Carousel for Projects */
@@ -67,6 +69,7 @@
   max-width: 800px;
   margin: 40px auto;
   overflow: hidden;
+  
 }
 .carousel-track {
   display: flex;
@@ -103,24 +106,34 @@
   right: 10px;
 }
 
-/* Indicators */
+/* Thumbnail indicators (mini preview boxes) */
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 16px;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
 }
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  background: #ddd;
-  border-radius: 50%;
-  display: inline-block;
+.carousel-thumb {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
   cursor: pointer;
-  transition: background 0.3s;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
 }
-.carousel-dot.active {
-  background: #d16e9b; /* pink active dot */
+
+.carousel-thumb:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.carousel-thumb.active {
+  opacity: 1;
+  border-color: #d16e9b; /* pink border for active thumbnail */
+  transform: scale(1.1);
 }
 
 @media (max-width: 700px) {
@@ -469,4 +482,129 @@ nav a:hover { text-decoration: underline; }
   padding: 8px 16px;
   border-radius: 12px;
   font-family: 'Quicksand', Arial, sans-serif;
+}
+
+/* ===== Skills Section ===== */
+.skills-container {
+  max-width: 900px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+.skills-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.skills-btn {
+  background: #ffe4ec;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s;
+  opacity: 0.6;
+  transform: translateY(0);
+}
+
+.skills-btn:hover {
+  opacity: 0.8;
+}
+
+.skills-btn.active {
+  background: #d16e9b;
+  color: white;
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(209,110,155,0.3);
+}
+
+/* Skills Card */
+.skills-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 32px;
+  min-height: 360px;
+}
+
+.skills-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+.skills-content.active {
+  display: block;
+}
+
+/* Hard Skills Layout */
+.skills-group {
+  margin-bottom: 28px;
+}
+.skills-group h3 {
+  color: #d16e9b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.skills-logos {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.skills-logos img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+.skills-logos img:hover {
+  transform: scale(1.15);
+}
+
+/* Soft Skills */
+.soft-list {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.soft-list li {
+  margin-bottom: 12px;
+}
+
+/* Language Cards */
+.lang-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.lang-card {
+  flex: 1 1 250px;
+  background: #ffe4ec;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.lang-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(209,110,155,0.25);
+}
+.lang-card h3 {
+  color: #d16e9b;
+  margin-bottom: 8px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
